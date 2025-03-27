@@ -4,9 +4,180 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
     <style>
- onclick="contact()"
+       body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: linear-gradient(135deg, #0569ffcf, #105ac8be);
+    padding: 15px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    height: 75px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand img {
+    height: 55px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #FFBB00;
+    transform: translateY(-2px);
+}
+
+/* Book Your Service Button */
+.book-btn {
+    background: #FB6542;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(251, 101, 66, 0.3);
+    transition: all 0.3s ease-in-out;
+    border: none;
+    position: absolute;
+    right: 20px;
+}
+
+.book-btn:hover {
+    background: #FFBB00;
+    box-shadow: 0 6px 12px rgba(255, 187, 0, 0.4);
+    transform: scale(1.05);
+}
+
+/* Responsive Navbar */
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .navbar-nav .nav-link {
+        margin: 5px 0;
+    }
+    
+    .book-btn {
+        position: static;
+        margin: 10px auto;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background: #375E97;
+    color: #f8f9fa;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Footer Sections */
+footer .col-md-4 {
+    flex: 1;
+    min-width: 280px;
+    margin: 10px;
+    text-align: center;
+}
+
+footer h5::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #FFBB00;
+    margin: 5px auto;
+}
+
+footer p, footer a {
+    font-size: 14px;
+    color: #ddd;
+    line-height: 1.8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #FB6542;
+}
+
+/* Quick Links */
+footer .list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+footer .list-unstyled li {
+    margin-bottom: 8px;
+}
+
+footer .list-unstyled li a:hover {
+    color: #FFBB00;
+}
+
+/* Copyright & Bottom Section */
+footer .text-center {
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+}
+
+.quick {
+    position: relative;
+    left: 0;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .quick {
+        left: 0;
+    }
+}
+
+iframe {
+    height: 100vh;
+    width: 100%;
+    border: none;
+}
+
     </style>
     <link rel="icon" type="image/x-icon" href="/images/hub.png">
     <title>Mechanic Hub</title>
@@ -63,10 +234,10 @@
             <div class="col-md-4 quick">
                 <h5>Quick Links</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#"  class="text-light">Home</a></li>
+                    <li><a href="#" onclick="home()" class="text-light">Home</a></li>
                     <!-- <li><a href="#" class="text-light">About</a></li> -->
-                    <li><a href="#"  class="text-light">Services</a></li>
-                    <li><a href="#"  class="text-light">Contact Us</a></li>
+                    <li><a href="#" onclick="service()" class="text-light">Services</a></li>
+                    <li><a href="#" onclick="contact()" class="text-light">Contact Us</a></li>
                 </ul>
             </div>
             <!-- Contact Info -->
