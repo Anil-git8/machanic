@@ -15,7 +15,7 @@
 
 /* Navbar Styling */
 .navbar {
-    background: linear-gradient(135deg, #0569ffcf, #105ac8be);
+    background: linear-gradient(135deg, #0569ff, #105ac8);
     padding: 15px 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     height: 75px;
@@ -23,6 +23,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    position: fixed; 
+    top: 0;  
+    left: 0;
+    width: 100%;  
+    z-index: 1000;
 }
 
 .navbar-brand img {
@@ -170,12 +176,22 @@ footer .text-center {
     .quick {
         left: 0;
     }
+    iframe {
+    height: 150vh;
+    width: 100%;
+    border: none;
+}
 }
 
 iframe {
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     border: none;
+    overflow: hidden;
+    margin-top: 75px;
+}
+body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
 }
 
     </style>
